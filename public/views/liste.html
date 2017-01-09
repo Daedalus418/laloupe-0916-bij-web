@@ -30,28 +30,30 @@
         </div>
     </div>
 </nav> -->
+<h1 class="center white-text">Liste des utilisateurs</h1>
+<div class="row">
+   <form class="col s12">
+     <div class="row">
+       <div class="input-field col s12">
+         <i class="material-icons prefix">&#xE8B6;</i>
+         <input type="text" class="form-control"placeholder="Reherche">
+         <!-- <input type="password" class="form-control" id="password" placeholder="Reherche " ng-model='vm.password' ng-required='true'> -->
+       </div>
+     </div>
+</form>
+       <div ng-click="show = true"class="center">
+         <a class="waves-effect waves-light btn white blue-text"><i class="material-icons left">&#xE8B6;</i>Rechercher</a>
+       </div>
 
-<nav>
-    <div class="nav-wrapper white">
-        <a href="#/">
-            <img class="navbar_logo" src="assets/img/logo.png"></a>
-        <ul class="right">
-          <li>
-              <a href="#/" class="navbar_link">
-                  <i class="material-icons left">&#xE88A;</i></a>
-          </li>
-            <li>
-                <a href="#/utilisateur" class="navbar_link">
-                    <i class="material-icons left">&#xE7FE;</i></a>
-            </li>
-            <li>
-                <a href="#/liste" class="navbar_link">
-                    <i class="material-icons left">&#xE85D;</i></a>
-            </li>
-            <li>
-                <a href="#/login" class="navbar_link">
-                    <i class="material-icons left">&#xE879;</i></a>
-            </li>
-        </ul>
-    </div>
-</nav>
+
+
+  <ul ng-show="show" class="collection">
+    <li class="collection-item avatar">
+        <div class="col s2"><i class="material-icons prefix textuel">&#xE8B6;</i></div>
+        <div class="col s2 textuel"><span class="title">Nom</span></div>
+        <div class="col s2 textuel">Prénom</div>
+        <div class="col s2 textuel">BIJ</div>
+        <div class="col s2"><a class="btn-floating btn-large waves-effect waves-light red accent-4 right"><i class="material-icons">&#xE872;</i></a></div>
+        <div class="col s2"><a class="btn-floating btn-large waves-effect waves-light orange right"><i class="material-icons">&#xE8B8;</i></a></div>
+      </li>
+  </ul>

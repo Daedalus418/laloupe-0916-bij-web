@@ -1,16 +1,100 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+html {
+    color: white
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+body {
+    background-color: #2a477c;
+    font-style: Roboto;
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+
+/* NAVBAR*/
+
+.right, .right li, .right li a, .right li a i {
+    height: 6vh;
+    line-height: 6vh;
+}
+
+.right a {
+    font-size: 1.5rem;
+}
+
+.navbar_link {
+    color: #2a477c;
+}
+
+nav ul a {
+    color: #2a477c;
+}
+
+.navbar_logo {
+    height: 100%;
+}
+
+nav {
+    height: 6vh;
+}
+
+nav img {
+    width: 100%;
+}
+
+.navbar_logo {
+    max-height: 65px;
+    width: auto;
+    height: 100%;
+}
+
+.navbar_paragraphe {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.main_next_logo {
+    font-size: 5em;
+}
+
+.blue-text {
+    color: #2a477c!important;
+}
+
+
+/* Main*/
+
+.main-text {
+    margin-top: 15%;
+}
+
+.main_center {
+    margin-top: 15%;
+}
+
+
+/* utilisateur*/
+
+.utilisateur {
+    margin-top: 10%;
+}
+
+label {
+    color: white;
+}
+
+
+/* Liste*/
+
+.collection-item.avatar {
+    font-size: 1em
+}
+
+.textuel {
+    margin-top: 2%;
+    color: #2a477c;
+}
+
+.material-icons.prefix.textuel {
+    font-size: 3em;
+    margin-top: 7%;
 }
