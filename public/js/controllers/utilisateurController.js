@@ -1,4 +1,4 @@
-function mainController(userService) {
+function utilisateurController(userService) {
 
     this.userService = userService;
 

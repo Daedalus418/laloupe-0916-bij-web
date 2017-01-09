@@ -1,4 +1,4 @@
-function mainController(userService) {
+function updateUserController(userService) {
 
     this.userService = userService;
 

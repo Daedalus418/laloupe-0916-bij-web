@@ -9,9 +9,17 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+        .when('/utilisateur/:id', {
+            templateUrl: 'views/utilisateur.html',
+            controller: 'updateUserController',
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
+        })
         .when('/utilisateur', {
             templateUrl: 'views/utilisateur.html',
-            controller: 'mainController',
+            controller: 'utilisateurController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
@@ -19,13 +27,12 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
         .when('/liste', {
             templateUrl: 'views/liste.html',
-            controller: 'mainController',
+            controller: 'listController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
             }
         })
-
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',

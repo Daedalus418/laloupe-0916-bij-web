@@ -1,10 +1,14 @@
-function mainController(userService) {
+function listController(userService, $timeout) {
+
 
     this.userService = userService;
 
     this.load = () => {
         this.userService.getAll().then((res) => {
             this.users = res.data;
+            $timeout(() => {
+              $('.modal').modal();
+            }, 0);
         });
     };
 
