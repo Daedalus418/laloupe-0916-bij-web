@@ -29,8 +29,12 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
 
     this.createAccount = () => {
         this.userService.create({
+            last_name: this.last_name,
+            first_name: this.first_name,
             email: this.email,
-            password: this.password
+            password: this.password,
+            bij: this.bij,
+            isAdmin: this.isadmin
         }).then((res) => {
             this.sessionFactory.token = res.data.token;
             this.sessionFactory.user = res.data.user;

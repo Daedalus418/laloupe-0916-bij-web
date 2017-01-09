@@ -30,20 +30,41 @@
         </div>
     </div>
 </nav> -->
-<h1 class="center white-text">Ajouter un utilisateur</h1>
- <div class="row white-text utilisateur">
-  <div class="col s6"><input type="text" class="form-control" id="password" placeholder="Nom " ng-model='vm.password' ng-required='true'></div>
-  <div class="col s6"><input type="password" class="form-control" id="password" placeholder="Prénom " ng-model='vm.password' ng-required='true'></div>
-  <div class="col s12"><input type="password" class="form-control" id="password" placeholder="Email " ng-model='vm.password' ng-required='true'></div>
-  <div class="col s12"><input type="password" class="form-control" id="password" placeholder="Mot de Passe " ng-model='vm.password' ng-required='true'></div>
-  <div class="col s12"><input type="password" class="form-control" id="password" placeholder="BIJ 059" ng-model='vm.password' ng-required='true'></div>
-  <div class="col s12 "><form action="#"><p><input type="checkbox" id="test5" /><label for="test5">Administrateur</label></p></form>
+<div ng-controller='loginController as vm'>
+    <h1 class="center white-text">Ajouter un utilisateur</h1>
+    <div class="row white-text utilisateur">
+        <div class="input-field col s6">
+            <input type="text" class="validate" id="last_name" ng-model='vm.last_name' ng-required='true'>
+            <label for="last_name">Nom</label>
+        </div>
+        <div class="input-field col s6">
+            <input type="text" class="validate" id="first_name" ng-model='vm.first_name' ng-required='true'>
+            <label for="first_name">Prénom</label>
+        </div>
+        <div class="input-field col s12">
+            <input type="email" class="validate" id="email" ng-model='vm.email' ng-required='true'>
+            <label for="email">Email</label>
+        </div>
+        <div class="input-field col s12">
+            <input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
+            <label for="password">Mot de passe</label>
+        </div>
+        <div class="input-field col s12">
+            <input type="text" class="validate" id="bij" ng-model='vm.bij' ng-required='true'>
+            <label for="bij">bij-n° de département</label>
+        </div>
+        <div class="input-field col s12 ">
+            <input type="checkbox" id="isadmin" ng-model='vm.isadmin'/>
+            <label for="isadmin">Administrateur</label>
+        </div>
+
+        <div class="center">
+            <a class="waves-effect waves-light btn white red-text">
+                <i class="material-icons left">&#xE5CD;</i>Supprimer</a>
+            <a onclick="Materialize.toast('Utilisateur ajouté', 3000)" class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'>
+                <i class="material-icons left">&#xE5CA;</i>Valider</a>
+        </div>
+    </div>
 </div>
 
-
-  <div class="center">
-    <a class="waves-effect waves-light btn white red-text"><i class="material-icons left">&#xE5CD;</i>Supprimer</a>
-    <a class="waves-effect waves-light btn white green-text"><i class="material-icons left">&#xE5CA;</i>Valider</a>
-  </div>
-
-</div>
+<!-- ajouter <form></form> -->

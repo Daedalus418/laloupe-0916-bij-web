@@ -9,19 +9,34 @@ const hashCode = (s) => s.split("").reduce((a, b) => {
 }, 0);
 
 const userSchema = new mongoose.Schema({
+    last_name: {
+        type: String,
+        required: true,
+        required: 'Un nom est requis'
+    },
+    first_name: {
+      type: String,
+      required: true,
+      required: 'Un prénom est requis'
+    },
     email: {
         type: String,
         required: true,
-        required: 'Email address is required',
+        required: 'Une adresse mail est requise',
         validate: [function(email) {
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-        }, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+        }, 'Entrez une adresse mail valide'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Entrez une adresse mail valide'],
         unique: true
     },
     password: {
         type: String,
         required: true
+    },
+    bij: {
+      type: String,
+      required: true,
+      required: 'Entrez un BIJ'
     },
     isAdmin: {
         type: Boolean,
