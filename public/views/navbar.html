@@ -31,7 +31,7 @@
     </div>
 </nav> -->
 
-<nav>
+<nav role="navigation" ng-controller='navbarController as vm'>
     <div class="nav-wrapper white">
         <a href="#/"><img class="navbar_logo" src="assets/img/logo.png"></a>
         <ul class="right">
@@ -39,16 +39,16 @@
               <a href="#/" class="navbar_link">
                   <i class="material-icons left">&#xE88A;</i>Accueil</a>
           </li>
-            <li>
+            <li ng-show='vm.sessionFactory.user.isAdmin'>
                 <a href="#/utilisateur" class="navbar_link">
                     <i class="material-icons left">&#xE7FE;</i>Ajouter un utilisateur</a>
             </li>
-            <li>
+            <li ng-show='vm.sessionFactory.user.isAdmin'>
                 <a href="#/liste" class="navbar_link">
                     <i class="material-icons left">&#xE85D;</i> liste des utilisateurs</a>
             </li>
-            <li>
-                <a href="#/login" class="navbar_link">
+            <li ng-show='vm.isLogged'>
+                <a href='#' ng-click='vm.logout()' class="navbar_link">
                     <i class="material-icons left">&#xE879;</i>Déconnecter</a>
             </li>
         </ul>
