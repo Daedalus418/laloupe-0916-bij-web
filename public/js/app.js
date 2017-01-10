@@ -8,6 +8,7 @@ angular.module('app', ['ngRoute'])
         .controller('listController', listController)
         .controller('updateUserController', updateUserController)
         .controller('utilisateurController', utilisateurController)
+        .controller('createUserController', createUserController)
         .config(routes)
         .run(loginStatus)
         ;
