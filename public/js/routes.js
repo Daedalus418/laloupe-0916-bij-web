@@ -18,7 +18,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             }
         })
         .when('/utilisateur', {
-            templateUrl: 'views/utilisateur.html',
+            templateUrl: 'views/createUser.html',
             controller: 'utilisateurController',
             controllerAs: 'vm',
             resolve: {
@@ -36,11 +36,6 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/login', {
             templateUrl: 'views/login.html',
             controller: 'loginController',
-            controllerAs: 'vm'
-        })
-        .when('/create/user',{
-            templateUrl: 'views/createUser.html',
-            controller: 'createUserController',
             controllerAs: 'vm'
         })
         .otherwise({
