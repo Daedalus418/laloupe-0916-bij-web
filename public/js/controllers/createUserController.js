@@ -15,24 +15,15 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
             bij: this.bij,
             isAdmin: this.isadmin
         }).then((res) => {
-            this.sessionFactory.token = res.data.token;
-            this.sessionFactory.user = res.data.user;
-            this.sessionFactory.isLogged = true;
-            this.$rootScope.$emit('loginStatusChanged', true);
             this.loginMessage = {};
             this.loginMessage.type = "success";
-            this.loginMessage.title = "Account created !";
-            this.loginMessage.message = "Redirecting...";
-            this.$timeout(() => {
-                this.loginMessage = null;
-                this.$location.path('/');
-            }, 2000);
+            this.loginMessage.title = "Compte créé !";
+            this.loginMessage.message = "Avec succès et gloire !";
         }).catch((res) => {
-            this.sessionFactory.isLogged = false;
-            this.$rootScope.$emit('loginStatusChanged', false);
+          console.log(res);
             this.loginMessage = {};
             this.loginMessage.type = "error";
-            this.loginMessage.title = "Sign up error";
+            this.loginMessage.title = "Erreur de création de compte";
             this.loginMessage.message = res.data;
         });
     };

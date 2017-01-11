@@ -11,18 +11,15 @@ const hashCode = (s) => s.split("").reduce((a, b) => {
 const userSchema = new mongoose.Schema({
     last_name: {
         type: String,
-        required: true,
-        required: 'Un nom est requis'
+        required: [true, 'Un nom est requis']
     },
     first_name: {
       type: String,
-      required: true,
-      required: 'Un prénom est requis'
+      required: [true, 'Un prénom est requis']
     },
     email: {
         type: String,
-        required: true,
-        required: 'Une adresse mail est requise',
+        required: [true, 'Une adresse mail est requise'],
         validate: [function(email) {
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
         }, 'Entrez une adresse mail valide'],
@@ -31,12 +28,11 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true
+        required: [true, 'Définissez un mot de passe']
     },
     bij: {
       type: String,
-      required: true,
-      required: 'Entrez un BIJ'
+      required: [true, 'Entrez un BIJ']
     },
     isAdmin: {
         type: Boolean,
@@ -126,7 +122,7 @@ export default class User {
                     if (err.code === 11000 || err.code === 11001) {
                         err.message = "Email " + req.body.email + " already exist";
                     }
-                    res.status(500).send(err.message);
+                    res.status(500).send(err);
                 } else {
                     let tk = jsonwebtoken.sign(user, token, {
                         expiresIn: "24h"
