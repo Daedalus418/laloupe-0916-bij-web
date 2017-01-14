@@ -49,9 +49,13 @@
             <input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
             <label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
         </div>
-        <div class="input-field col s12">
+        <div class="input-field col s6">
             <input type="text" class="validate" id="bij" ng-model='vm.bij' ng-required='true'>
-            <label for="bij">{{vm.loginMessage.message.errors.bij.message || "bij-n° de département"}}</label>
+            <label for="bij">{{vm.loginMessage.message.errors.bij.message || "Structure (BIJ, UNIJ, etc)"}}</label>
+        </div>
+        <div class="input-field col s6">
+            <input type="text" class="validate" id="number" ng-model='vm.number' ng-required='true'>
+            <label for="number">{{vm.loginMessage.message.errors.num.message || "Numéro"}}</label>
         </div>
         <div class="input-field col s12 ">
             <input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.isadmin'/>
@@ -63,7 +67,7 @@
                 <i class="material-icons left">&#xE5CD;</i>Supprimer</a>
             <a class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'>
                 <i class="material-icons left">&#xE5CA;</i>Valider</a>
-                {{vm.loginMessage.title}}
+                {{vm.loginMessage.title}} {{vm.loginMessage.message}}
         </div>
     </div>
 </div>
