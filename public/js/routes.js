@@ -10,8 +10,8 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             }
         })
         .when('/utilisateur/:id', {
-            templateUrl: 'views/utilisateur.html',
-            controller: 'updateUserController',
+            templateUrl: 'views/editUser.html',
+            controller: 'editUserController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
