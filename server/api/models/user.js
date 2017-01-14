@@ -34,6 +34,10 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: [true, 'Entrez un BIJ']
     },
+    number: {
+      type: Number,
+      required: [true, 'Entrez le numéro de la structure']
+    },
     isAdmin: {
         type: Boolean,
         default: false
