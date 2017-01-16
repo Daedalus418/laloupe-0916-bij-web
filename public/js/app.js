@@ -7,7 +7,6 @@ angular.module('app', ['ngRoute'])
         .controller('listController', listController)
         .controller('editUserController', updateUserController)
         .controller('createUserController', createUserController)
-        .controller('utilisateurController', utilisateurController)
         .config(routes)
         .run(loginStatus)
         ;
