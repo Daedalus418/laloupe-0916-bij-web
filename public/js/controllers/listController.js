@@ -1,6 +1,5 @@
 function listController(userService, $timeout) {
 
-
     this.userService = userService;
 
     this.load = () => {
