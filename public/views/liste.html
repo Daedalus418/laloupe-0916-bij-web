@@ -20,20 +20,20 @@
             <div class="col s2 textuel white-text">Email</div>
         </li>
     </ul>
+    <div id="modal-{{$index}}" class="modal blue-text" ng-repeat="user in vm.users">
+        <div class="modal-content">
+            <h4 class="center">Êtes-vous sûr(e) de vouloir supprimer ce compte ?</h4>
+            <div class="center">
+                <a class="modal-close waves-effect waves-light btn white red-text">
+                    <i class="material-icons left">&#xE5CD;</i>Non</a>
+                <button ng-click="vm.delete(user)" class="waves-effect waves-light btn white green-text modal-close">
+                    <i class="material-icons left">&#xE5CA;</i>Oui</button>
+            </div>
+        </div>
+    </div>
 
     <ul class="collection">
         <li ng-repeat="user in vm.users | filter:vm.searchText" class="collection-item avatar">
-            <div id="modal-{{$index}}" class="modal blue-text">
-                <div class="modal-content">
-                    <h4 class="center">Êtes-vous sûr(e) de vouloir supprimer ce compte ?</h4>
-                    <div class="center">
-                        <a class="modal-close waves-effect waves-light btn white red-text">
-                            <i class="material-icons left">&#xE5CD;</i>Non</a>
-                        <button ng-click="vm.delete(user)" class="waves-effect waves-light btn white green-text modal-close">
-                            <i class="material-icons left">&#xE5CA;</i>Oui</button>
-                    </div>
-                </div>
-            </div>
             <div class="col s1">
                 <i class="material-icons prefix textuel">&#xE8B6;</i>
             </div>
