@@ -1,41 +1,39 @@
-<div ng-controller='createUserController as vm'>
-    <h1 class="center white-text">Ajouter un utilisateur</h1>
-    <div class="row white-text utilisateur">
-        <div class="input-field col s6">
-            <input type="text" class="validate" id="last_name" ng-model='vm.last_name' ng-required='true'>
-            <label for="last_name">{{vm.loginMessage.message.errors.last_name.message || "Nom"}}</label>
-        </div>
-        <div class="input-field col s6">
-            <input type="text" class="validate" id="first_name" ng-model='vm.first_name' ng-required='true'>
-            <label for="first_name">{{vm.loginMessage.message.errors.first_name.message || "Prénom"}}</label>
-        </div>
-        <div class="input-field col s12">
-            <input type="email" class="validate" id="email" ng-model='vm.email' ng-required='true'>
-            <label for="email">{{vm.loginMessage.message.errors.email.message || "Email"}}</label>
-        </div>
-        <div class="input-field col s12">
-            <input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
-            <label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
-        </div>
-        <div class="input-field col s6">
-            <input type="text" class="validate" id="bij" ng-model='vm.bij' ng-required='true'>
-            <label for="bij">{{vm.loginMessage.message.errors.bij.message || "Structure (BIJ, UNIJ, etc)"}}</label>
-        </div>
-        <div class="input-field col s6">
-            <input type="text" class="validate" id="number" ng-model='vm.number' ng-required='true'>
-            <label for="number">{{vm.loginMessage.message.errors.num.message || "Numéro"}}</label>
-        </div>
-        <div class="input-field col s12 ">
-            <input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.isadmin'/>
-            <label for="isadmin">Administrateur</label>
-        </div>
+<h1 class="center white-text">Ajouter un utilisateur</h1>
+<div class="row white-text utilisateur">
+    <div class="input-field col s6">
+        <input type="text" class="validate" id="last_name" ng-model='vm.last_name' ng-required='true'>
+        <label for="last_name">{{vm.loginMessage.message.errors.last_name.message || "Nom"}}</label>
+    </div>
+    <div class="input-field col s6">
+        <input type="text" class="validate" id="first_name" ng-model='vm.first_name' ng-required='true'>
+        <label for="first_name">{{vm.loginMessage.message.errors.first_name.message || "Prénom"}}</label>
+    </div>
+    <div class="input-field col s12">
+        <input type="email" class="validate" id="email" ng-model='vm.email' ng-required='true'>
+        <label for="email">{{vm.loginMessage.message.errors.email.message || "Email"}}</label>
+    </div>
+    <div class="input-field col s12">
+        <input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
+        <label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
+    </div>
+    <div class="input-field col s6">
+        <input type="text" class="validate" id="bij" ng-model='vm.bij' ng-required='true'>
+        <label for="bij">{{vm.loginMessage.message.errors.bij.message || "Structure (BIJ, UNIJ, etc)"}}</label>
+    </div>
+    <div class="input-field col s6">
+        <input type="text" class="validate" id="number" ng-model='vm.number' ng-required='true'>
+        <label for="number">{{vm.loginMessage.message.errors.num.message || "Numéro"}}</label>
+    </div>
+    <div class="input-field col s12 ">
+        <input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.isadmin'/>
+        <label for="isadmin">Administrateur</label>
+    </div>
 
-        <div class="center">
-            <a class="waves-effect waves-light btn white red-text">
-                <i class="material-icons left">&#xE5CD;</i>Supprimer</a>
-            <a class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'>
-                <i class="material-icons left">&#xE5CA;</i>Valider</a>
-            <br/>{{vm.loginMessage.title}}
-        </div>
+    <div class="center">
+        <a class="waves-effect waves-light btn white red-text">
+            <i class="material-icons left">&#xE5CD;</i>Supprimer</a>
+        <a class="waves-effect waves-light btn white green-text" ng-click='vm.createAccount()'>
+            <i class="material-icons left">&#xE5CA;</i>Valider</a>
+        <br/>{{vm.loginMessage.title}}
     </div>
 </div>
