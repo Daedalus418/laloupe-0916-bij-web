@@ -19,7 +19,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         })
         .when('/utilisateur', {
             templateUrl: 'views/createUser.html',
-            controller: 'utilisateurController',
+            controller: 'createUserController',
             controllerAs: 'vm',
             resolve: {
                 connected: checkIsConnected
