@@ -70,14 +70,14 @@ nav img {
 
 /* Main*/
 
-.main-text {
+/*.main-text {
     margin-top: 15%;
 }
 
 .main_center {
     margin-top: 15%;
 }
-
+*/
 
 /* utilisateur*/
 
@@ -135,4 +135,28 @@ label {
 .material-icons.prefix.textuel {
     font-size: 3em;
     margin-top: 7%;
+}
+
+/* responsive */
+@media screen and (max-height: 1080px) {
+  /* Main*/
+
+  .main-text {
+      margin-top: 15%;
+  }
+
+  .main_center {
+      margin-top: 15%;
+  }
+}
+@media screen and (max-height: 900px) {
+  /* Main*/
+
+  .main-text {
+      margin-top: 10%;
+  }
+
+  .main_center {
+      margin-top: 10%;
+  }
 }
