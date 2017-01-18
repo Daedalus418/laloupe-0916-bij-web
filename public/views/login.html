@@ -11,12 +11,16 @@
             <input type="password" class="form-control" id="password" ng-model='vm.password' ng-required='true'>
             <label for="password" class="col-sm-2 control-label">Mot de passe</label>
         </div>
+        <div>
+            <p>Mot de passe oublié ? Contactez votre administrateur.</p>
+        </div>
         <div class="input-field col s10">
             <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
         </div>
     </form>
     <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
-        <h4><span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
+        <h4>
+            <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
         <p>{{vm.loginMessage.message}}</p>
     </div>
 </div>
