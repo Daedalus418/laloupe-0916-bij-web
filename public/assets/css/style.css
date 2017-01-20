@@ -175,7 +175,7 @@ label {
 
 /* responsive */
 
-@media screen and (max-height: 1080px) {
+@media screen and (min-height: 1000px) {
     /* Main*/
     .center-align {
       margin-top: -7%;
