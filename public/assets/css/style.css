@@ -177,11 +177,17 @@ label {
 
 @media screen and (max-height: 1080px) {
     /* Main*/
+    .center-align {
+      margin-top: -7%;
+    }
     .main-text {
         margin-top: 15%;
     }
     .main_center {
-        margin-top: 15%;
+        margin-top: 10%;
+    }
+    .navbar_paragraphe {
+      font-size: 2rem;
     }
 }
 
