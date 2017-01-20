@@ -9,6 +9,12 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
                 connected: checkIsConnected
             }
         })
+        .when('/mention', {
+            templateUrl: 'views/mention.html'
+        })
+        .when('/credit', {
+            templateUrl: 'views/credit.html'
+        })
         .when('/utilisateur/:id', {
             templateUrl: 'views/utilisateur.html',
             controller: 'updateUserController',
