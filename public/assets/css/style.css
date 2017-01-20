@@ -7,7 +7,7 @@ body {
     font-style: Roboto;
 }
 
-input{
+input {
   color: white!important;
   border-bottom : 1px solid white!important;
 }
@@ -67,7 +67,7 @@ nav img {
     color: #2a477c!important;
 }
 
-/* utilisateur*/
+/*UTILISATEUR*/
 
 .utilisateur {
     margin-top: 10%;
@@ -84,24 +84,24 @@ label {
     border: 1px solid #2a477c;
 }
 
-.checkbox-indigo[type="checkbox"] + label:before{
+.checkbox-indigo[type="checkbox"] + label:before {
   border: 2px solid white;
   background: transparent;
 }
-.checkbox-indigo[type="checkbox"]:checked + label:before{
+.checkbox-indigo[type="checkbox"]:checked + label:before {
   border: 2px solid transparent;
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   background: transparent;
 }
-.checkbox-indigo.filled-in[type="checkbox"] + label:after{
+.checkbox-indigo.filled-in[type="checkbox"] + label:after {
   border: 2px solid white;
   background: transparent;
 }
-.checkbox-indigo.filled-in[type="checkbox"]:checked + label:after{
+.checkbox-indigo.filled-in[type="checkbox"]:checked + label:after {
   background: white;
 }
-.checkbox-indigo.filled-in[type="checkbox"]:checked + label:before{
+.checkbox-indigo.filled-in[type="checkbox"]:checked + label:before {
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
   border-right: 2px solid #fff;
