@@ -139,9 +139,6 @@ label {
     .main_center {
         margin-top: 15%;
     }
-    .navbar_paragraphe {
-      font-size: 1.3rem;
-    }
 }
 
 @media screen and (max-height: 900px) {
@@ -151,5 +148,8 @@ label {
     }
     .main_center {
         margin-top: 7%;
+    }
+    .navbar_paragraphe {
+      font-size: 1.3rem;
     }
 }
