@@ -2,7 +2,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
     $locationProvider.html5Mode(false).hashPrefix('');
     $routeProvider
         .when('/', {
-            templateUrl: 'views/login.html',
+            templateUrl: 'views/main.html',
             resolve: {
                 connected: checkIsConnected
             }
