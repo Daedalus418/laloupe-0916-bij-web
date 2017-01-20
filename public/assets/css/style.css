@@ -63,11 +63,15 @@ nav img {
 }
 
 .blue-text {
-    color: #2a477c!important;
+    color: #2a477c !important;
 }
 
 
 /*UTILISATEUR*/
+
+.center {
+  margin-top: 5% !important;
+}
 
 .utilisateur {
     margin-top: 10%;
