@@ -187,6 +187,9 @@ label {
         margin-top: 10%;
     }
     .main_center {
-        margin-top: 10%;
+        margin-top: 7%;
+    }
+    .navbar_paragraphe {
+      font-size: 1.3rem;
     }
 }

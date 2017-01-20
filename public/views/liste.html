@@ -12,11 +12,12 @@
 
     <ul class="collection blueForm">
         <li class="collection-item avatar blueForm">
-            <div class="col s2 offset-s1 textuel white-text">
+            <div class="col s2 textuel white-text">
                 <span class="title">Prénom</span>
             </div>
             <div class="col s2 textuel white-text">Nom</div>
             <div class="col s2 textuel white-text">BIJ</div>
+            <div class="col s2 textuel white-text">n° BIJ</div>
             <div class="col s2 textuel white-text">Email</div>
         </li>
     </ul>
@@ -34,16 +35,14 @@
 
     <ul class="collection">
         <li ng-repeat="user in vm.users | filter:vm.searchText" class="collection-item avatar">
-            <div class="col s1">
-                <i class="material-icons prefix textuel">&#xE8B6;</i>
-            </div>
             <div class="col s2 textuel">
                 <span class="title">{{user.first_name}}</span>
             </div>
             <div class="col s2 textuel">{{user.last_name}}</div>
             <div class="col s2 textuel">{{user.bij}}</div>
+            <div class="col s2 textuel">{{user.number}}</div>
             <div class="col s2 textuel">{{user.email}}</div>
-            <div class="col s2">
+            <div class="col s1">
                 <a href='/#/utilisateur/{{user._id}}' class="btn-floating btn-large waves-effect waves-light grey right">
                     <i class="material-icons">&#xE8B8;</i>
                 </a>
