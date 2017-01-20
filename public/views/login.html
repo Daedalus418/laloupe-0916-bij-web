@@ -1,30 +1,26 @@
 <div class="row">
-    <div class="">
-        <div class='center white-text'>
-            <h1>Connectez-vous</h1>
+    <div class='center white-text'>
+        <h1>Connectez-vous</h1>
+    </div>
+    <form class="col s12">
+        <div class="input-field col s12">
+            <input type="email" class="form-control" id="email" ng-model='vm.email' ng-required='true'>
+            <label for="email" class="col-sm-2 control-label">Email</label>
         </div>
-        <form class="form-horizontal" name="formConnect">
-            <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col s12">
-                    <input type="email" class="form-control" id="email" placeholder="Email" ng-model='vm.email' ng-required='true'>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col s12">
-                    <input type="password" class="form-control" id="password" placeholder="Password" ng-model='vm.password' ng-required='true'>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col s10">
-                    <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
-                </div>
-            </div>
-        </form>
-        <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
-            <h4><span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
-            <p>{{vm.loginMessage.message}}</p>
+        <div class="input-field col s12">
+            <input type="password" class="form-control" id="password" ng-model='vm.password' ng-required='true'>
+            <label for="password" class="col-sm-2 control-label">Mot de passe</label>
         </div>
+        <div>
+            <p>Mot de passe oublié ? Contactez votre administrateur.</p>
+        </div>
+        <div class="input-field col s10">
+            <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
+        </div>
+    </form>
+    <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
+        <h4>
+            <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
+        <p>{{vm.loginMessage.message}}</p>
     </div>
 </div>

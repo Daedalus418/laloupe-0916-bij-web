@@ -1,6 +1,5 @@
 function listController(userService, $timeout) {
 
-
     this.userService = userService;
 
     this.load = () => {
@@ -12,15 +11,8 @@ function listController(userService, $timeout) {
         });
     };
 
-    this.create = () => {
-        this.userService.create(this.user).then(() => {
-            this.user = '';
-            this.load();
-        });
-    };
-
     this.update = (user) => {
-        this.userService.update(user._id, user.description).then(() => {
+        this.userService.update(user._id, user.first_name, user.last_name, user.bij, user.number, user.email).then(() => {
             this.load();
         });
     };

@@ -34,6 +34,10 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: [true, 'Entrez un BIJ']
     },
+    number: {
+      type: Number,
+      required: [true, 'Entrez le numéro de la structure']
+    },
     isAdmin: {
         type: Boolean,
         default: false
@@ -53,9 +57,9 @@ export default class User {
 
     connect(req, res) {
         if (!req.body.email) {
-            res.status(400).send('Please enter an email');
+            res.status(400).send('Entrez une adresse mail s\'il vous plait');
         } else if (!req.body.password) {
-            res.status(400).send('Please enter a password');
+            res.status(400).send('Entrez un mot de passe s\'il vous plait');
         } else {
             model.findOne({
                 email: req.body.email
@@ -78,7 +82,7 @@ export default class User {
                                     token: tk
                                 });
                             } else {
-                                res.status(400).send('Incorrect password');
+                                res.status(400).send('Mot de passe incorrect');
                             }
                         };
                     });
@@ -120,7 +124,7 @@ export default class User {
             (err, user) => {
                 if (err || !user) {
                     if (err.code === 11000 || err.code === 11001) {
-                        err.message = "Email " + req.body.email + " already exist";
+                        err.message = "L'email " + req.body.email + " existe déjà";
                     }
                     res.status(500).send(err);
                 } else {

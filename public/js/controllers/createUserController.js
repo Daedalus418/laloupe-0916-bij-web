@@ -13,6 +13,7 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
             email: this.email,
             password: this.password,
             bij: this.bij,
+            number: this.number,
             isAdmin: this.isadmin
         }).then((res) => {
             this.loginMessage = {};
@@ -20,7 +21,6 @@ function createUserController(userService, sessionFactory, $timeout, $location, 
             this.loginMessage.title = "Compte créé !";
             this.loginMessage.message = "Avec succès et gloire !";
         }).catch((res) => {
-          console.log(res);
             this.loginMessage = {};
             this.loginMessage.type = "error";
             this.loginMessage.title = "Erreur de création de compte";
