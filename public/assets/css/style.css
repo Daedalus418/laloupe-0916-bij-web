@@ -68,10 +68,10 @@ nav img {
 }
 
 .navbar_paragraphe {
-    font-size: 1.5rem;
     color: white;
     margin-right: 8%;
     margin-left: 8%;
+    margin-bottom: 5%;
 }
 
 .main_next_logo {
@@ -82,18 +82,7 @@ nav img {
     color: #2a477c !important;
 }
 
-
-/* Main*/
-
-.main-text {
-    margin-top: 15%;
-}
-
-.main_center {
-    margin-top: 15%;
-}
-
-/* footer*/
+/*FOOTER*/
 
 .social_footer {
     padding-top: 10px;
@@ -107,7 +96,7 @@ nav img {
     height: 6vh;
 }
 
-/* utilisateur*/
+/*USER*/
 
 .center {
   margin-top: 5% !important;
@@ -156,7 +145,7 @@ label {
 }
 
 
-/* Liste*/
+/*LISTE*/
 
 .collection-item.avatar {
     font-size: 1em
@@ -173,30 +162,21 @@ label {
 }
 
 
-/* responsive */
+/*RESPONSIVE*/
 
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 993px) {
     /* Main*/
-    .center-align {
-      margin-top: -7%;
-    }
     .main-text {
         margin-top: 15%;
-    }
-    .main_center {
-        margin-top: 10%;
     }
     .navbar_paragraphe {
       font-size: 2rem;
     }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 992px) {
     /* Main*/
     .main-text {
-        margin-top: 10%;
-    }
-    .main_center {
         margin-top: 7%;
     }
     .navbar_paragraphe {
