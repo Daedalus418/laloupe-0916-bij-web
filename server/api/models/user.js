@@ -74,7 +74,7 @@ export default class User {
                             if (isMatch) {
                                 user.password = null;
                                 let tk = jsonwebtoken.sign(user, token, {
-                                    expiresIn: "24h"
+                                    expiresIn: "2h"
                                 });
                                 res.json({
                                     success: true,

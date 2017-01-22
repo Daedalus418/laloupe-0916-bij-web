@@ -1,4 +1,4 @@
-function navbarController(sessionFactory, $rootScope, $window, $location) {
+function navbarController(sessionFactory, $rootScope, $location) {
 
     this.isLogged = sessionFactory.isLogged;
     this.sessionFactory = sessionFactory;
