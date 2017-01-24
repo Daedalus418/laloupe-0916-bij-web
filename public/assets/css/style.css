@@ -74,6 +74,7 @@ nav img {
     margin-left: 8%;
 }
 
+
 .main_next_logo {
     font-size: 5em;
 }
@@ -105,6 +106,11 @@ nav img {
     bottom: 0;
     width: 100%;
     height: 6vh;
+}
+
+/* credit*/
+.photoSize{
+  width: 50%
 }
 
 /* utilisateur*/
