@@ -1,4 +1,4 @@
-<div ng-controller='editUserController as vm'>
+<div>
     <h1 class="center white-text">Editer un utilisateur</h1>
     <div class="row white-text utilisateur">
         <form class="col s12">
@@ -24,7 +24,7 @@
             </div>
             <div class="input-field col s6">
                 <input type="text" class="validate" id="number" ng-model='vm.user.number'>
-                <label for="number">{{vm.user.number || "Numéro"}}</label>
+                <label for="number">{{vm.user.number || "Numéro de département"}}</label>
             </div>
             <div class="input-field col s12 ">
                 <input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.user.isAdmin'/>
