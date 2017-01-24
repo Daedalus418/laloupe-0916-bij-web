@@ -8,11 +8,11 @@
         <input type="text" class="validate" id="first_name" ng-model='vm.first_name' ng-required='true'>
         <label for="first_name">{{vm.loginMessage.message.errors.first_name.message || "Prénom"}}</label>
     </div>
-    <div class="input-field col s12">
+    <div class="input-field col s6">
         <input type="email" class="validate" id="email" ng-model='vm.email' ng-required='true'>
         <label for="email">{{vm.loginMessage.message.errors.email.message || "Email"}}</label>
     </div>
-    <div class="input-field col s12">
+    <div class="input-field col s6">
         <input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
         <label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
     </div>
