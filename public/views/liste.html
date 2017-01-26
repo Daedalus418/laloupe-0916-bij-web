@@ -1,0 +1,57 @@
+<h1 class="center white-text">Liste des utilisateurs</h1>
+<div class="row">
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">&#xE8B6;</i>
+                <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Recherche">
+            </div>
+        </div>
+    </form>
+
+    <ul class="collection blueForm">
+        <li class="collection-item avatar blueForm">
+            <div class="col s2 textuel white-text">
+                <span class="title">Prénom</span>
+            </div>
+            <div class="col s2 textuel white-text">Nom</div>
+            <div class="col s1 textuel white-text">BIJ</div>
+            <div class="col s1 textuel white-text">n° BIJ</div>
+            <div class="col s2 textuel white-text">Email</div>
+        </li>
+    </ul>
+    <div id="modal-{{$index}}" class="modal blue-text" ng-repeat="user in vm.users">
+        <div class="modal-content">
+            <h4 class="center">Êtes-vous sûr(e) de vouloir supprimer ce compte ?</h4>
+            <div class="center">
+                <a class="modal-close waves-effect waves-light btn white red-text">
+                    <i class="material-icons left">&#xE5CD;</i>Non</a>
+                <button ng-click="vm.delete(user)" class="waves-effect waves-light btn white green-text modal-close">
+                    <i class="material-icons left">&#xE5CA;</i>Oui</button>
+            </div>
+        </div>
+    </div>
+
+    <ul class="collection">
+        <li ng-repeat="user in vm.users | filter:vm.searchText" class="collection-item avatar">
+            <div class="col s2 textuel">
+                <span class="title">{{user.first_name}}</span>
+            </div>
+            <div class="col s2 textuel">{{user.last_name}}</div>
+            <div class="col s1 textuel">{{user.bij}}</div>
+            <div class="col s1 textuel">{{user.number}}</div>
+            <div class="col s2 textuel">{{user.email}}</div>
+            <div class="col s2">
+                <a href='/#/utilisateur/{{user._id}}' class="btn-floating btn-large waves-effect waves-light grey right">
+                    <i class="material-icons">&#xE8B8;</i>
+                </a>
+            </div>
+            <div class="col s1">
+                <a data-target="modal-{{$index}}" class="btn-floating btn-large waves-effect waves-light red accent-4 right">
+                    <i class="material-icons">&#xE872;</i>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

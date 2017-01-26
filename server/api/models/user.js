@@ -9,19 +9,34 @@ const hashCode = (s) => s.split("").reduce((a, b) => {
 }, 0);
 
 const userSchema = new mongoose.Schema({
+    last_name: {
+        type: String,
+        required: [true, 'Un nom est requis']
+    },
+    first_name: {
+      type: String,
+      required: [true, 'Un prénom est requis']
+    },
     email: {
         type: String,
-        required: true,
-        required: 'Email address is required',
+        required: [true, 'Une adresse mail est requise'],
         validate: [function(email) {
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-        }, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+        }, 'Entrez une adresse mail valide'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Entrez une adresse mail valide'],
         unique: true
     },
     password: {
         type: String,
-        required: true
+        required: [true, 'Définissez un mot de passe']
+    },
+    bij: {
+      type: String,
+      required: [true, 'Entrez un BIJ']
+    },
+    number: {
+      type: Number,
+      required: [true, 'Entrez le numéro de la structure']
     },
     isAdmin: {
         type: Boolean,
@@ -42,9 +57,9 @@ export default class User {
 
     connect(req, res) {
         if (!req.body.email) {
-            res.status(400).send('Please enter an email');
+            res.status(400).send('Entrez une adresse mail s\'il vous plait');
         } else if (!req.body.password) {
-            res.status(400).send('Please enter a password');
+            res.status(400).send('Entrez un mot de passe s\'il vous plait');
         } else {
             model.findOne({
                 email: req.body.email
@@ -59,7 +74,7 @@ export default class User {
                             if (isMatch) {
                                 user.password = null;
                                 let tk = jsonwebtoken.sign(user, token, {
-                                    expiresIn: "24h"
+                                    expiresIn: "2h"
                                 });
                                 res.json({
                                     success: true,
@@ -67,7 +82,7 @@ export default class User {
                                     token: tk
                                 });
                             } else {
-                                res.status(400).send('Incorrect password');
+                                res.status(400).send('Mot de passe incorrect');
                             }
                         };
                     });
@@ -109,9 +124,9 @@ export default class User {
             (err, user) => {
                 if (err || !user) {
                     if (err.code === 11000 || err.code === 11001) {
-                        err.message = "Email " + req.body.email + " already exist";
+                        err.message = "L'email " + req.body.email + " existe déjà";
                     }
-                    res.status(500).send(err.message);
+                    res.status(500).send(err);
                 } else {
                     let tk = jsonwebtoken.sign(user, token, {
                         expiresIn: "24h"
