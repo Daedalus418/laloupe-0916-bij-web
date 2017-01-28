@@ -32,11 +32,11 @@ const userSchema = new mongoose.Schema({
     },
     bij: {
       type: String,
-      required: [true, 'Entrez un BIJ']
+      required: [true, 'Entrez un nom de structure (BIJ, UNIJ,...)']
     },
     number: {
       type: Number,
-      required: [true, 'Entrez le numéro de la structure']
+      required: [true, 'Entrez un numéro de département']
     },
     isAdmin: {
         type: Boolean,
