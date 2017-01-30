@@ -2,6 +2,7 @@ function navbarController(sessionFactory, $rootScope, $window, $location) {
 
     this.isLogged = sessionFactory.isLogged;
     this.sessionFactory = sessionFactory;
+    this.user = sessionFactory.user;
     this.$rootScope = $rootScope;
     this.$location = $location;
 
