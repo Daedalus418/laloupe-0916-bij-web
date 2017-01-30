@@ -4,27 +4,27 @@
 		<form class="col s12">
 			<div class="input-field col s6">
 				<input type="text" class="validate" id="last_name" ng-model='vm.user.last_name'>
-				<label for="last_name">{{vm.user.last_name || "Nom"}}</label>
+				<label class="active" for="last_name">Nom</label>
 			</div>
 			<div class="input-field col s6">
 				<input type="text" class="validate" id="first_name" ng-model='vm.user.first_name'>
-				<label for="first_name">{{vm.user.first_name || "Prénom"}}</label>
+				<label class="active" for="first_name">Prénom</label>
 			</div>
 			<div class="input-field col s6">
 				<input type="email" class="validate" id="email" ng-model='vm.user.email'>
-				<label for="email">{{vm.user.email || "Email"}}</label>
+				<label class="active" for="email">Email</label>
 			</div>
 			<div class="input-field col s6">
 				<input type="password" class="validate" id="password" ng-model='vm.user.password'>
-				<label for="password">{{vm.user.password || "Mot de passe"}}</label>
+				<label class="active" for="password">Mot de passe</label>
 			</div>
 			<div class="input-field col s6">
 				<input type="text" class="validate" id="bij" ng-model='vm.user.bij'>
-				<label for="bij">{{vm.user.bij || "Structure (BIJ, UNIJ, etc)"}}</label>
+				<label class="active" for="bij">Structure (BIJ, UNIJ, etc)</label>
 			</div>
 			<div class="input-field col s6">
 				<input type="text" class="validate" id="number" ng-model='vm.user.number'>
-				<label for="number">{{vm.user.number || "Numéro de département"}}</label>
+				<label class="active" for="number">Numéro de département</label>
 			</div>
 			<div class="input-field col s12 ">
 				<input type="checkbox" class="checkbox-indigo" id="isadmin" ng-model='vm.user.isAdmin' />

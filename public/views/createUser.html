@@ -3,31 +3,31 @@
 	<div class="row">
 		<div class="input-field col s6">
 			<input type="text" class="validate" id="last_name" ng-model='vm.last_name' ng-required='true'>
-			<label for="last_name">{{vm.loginMessage.message.errors.last_name.message || "Nom"}}</label>
+			<label class="active" for="last_name">{{vm.loginMessage.message.errors.last_name.message || "Nom"}}</label>
 		</div>
 		<div class="input-field col s6">
 			<input type="text" class="validate" id="first_name" ng-model='vm.first_name' ng-required='true'>
-			<label for="first_name">{{vm.loginMessage.message.errors.first_name.message || "Prénom"}}</label>
+			<label class="active" for="first_name">{{vm.loginMessage.message.errors.first_name.message || "Prénom"}}</label>
 		</div>
 	</div>
 	<div class="row">
 		<div class="input-field col s6">
 			<input type="email" class="validate" id="email" ng-model='vm.email' ng-required='true'>
-			<label for="email">{{vm.loginMessage.message.errors.email.message || "Email"}}</label>
+			<label class="active" for="email">{{vm.loginMessage.message.errors.email.message || "Email"}}</label>
 		</div>
 		<div class="input-field col s6">
 			<input type="password" class="validate" id="password" ng-model='vm.password' ng-required='true'>
-			<label for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
+			<label class="active" for="password">{{vm.loginMessage.message.errors.password.message || "Mot de passe"}}</label>
 		</div>
 	</div>
 	<div class="row">
 		<div class="input-field col s6">
 			<input type="text" class="validate" id="bij" ng-model='vm.bij' ng-required='true'>
-			<label for="bij">{{vm.loginMessage.message.errors.bij.message || "Nom de structure (BIJ, UNIJ, etc)"}}</label>
+			<label class="active" for="bij">{{vm.loginMessage.message.errors.bij.message || "Nom de structure (BIJ, UNIJ, etc)"}}</label>
 		</div>
 		<div class="input-field col s6">
 			<input type="text" class="validate" id="number" ng-model='vm.number' ng-required='true'>
-			<label for="number">{{vm.loginMessage.message.errors.num.message || "Numéro de département"}}</label>
+			<label class="active" for="number">{{vm.loginMessage.message.errors.num.message || "Numéro de département"}}</label>
 		</div>
 	</div>
 	<div class="row">
